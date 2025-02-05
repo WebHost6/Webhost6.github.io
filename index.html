@@ -313,12 +313,21 @@
 </div>
 
 <script>
+  const urlParams = new URLSearchParams(window.location.search);
+
+  if (urlParams.get('link') === 'nav') {
+    console.log("already connected")
+  } else {
+    
+  
   console.log("connecting 198.71.51.8")
   setTimeout(() => {
     document.getElementById("connecting").innerHTML = "Done!";
     document.getElementById("loading-screen").style.display = "none";
     console.log("done connecting")
   }, 3000);
+
+  }
 </script>
   <header>
     <div class="logo">
@@ -329,7 +338,7 @@
       <ul>
         <li><a class="nav" href="">Home</a></li>
         <li><a class="nav" href="about">About</a></li>
-        <li><a class="nav" href="fqa">FAQ</a></li>
+        <li><a class="nav" href="fqa">FQA</a></li>
         <li><a class="nav" href="contact">Contact</a></li>
         <li><a class="nav" href="services">Services</a></li>
       </ul>
